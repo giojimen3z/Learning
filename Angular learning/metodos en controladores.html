@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app= "miApp">
+<head>
+    <title>insertar varios controladores en Angular JS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+</head>
+<body>
+
+    <div ng-controller = "circunferencia">
+       
+        <label>Diametro</label>
+        <input type="text"  ng-model = "diametro"> <br>
+        <button ng-click = "calcularcircunferencia()"> Calcular circunferencias </button>
+        {{circunferencia}}
+    </div>
+    <br>
+    <script>
+        
+        var miaplicacion  = angular.module('miApp' , [])
+
+        miaplicacion.controller ('circunferencia',['$scope' , function($scope){
+
+
+            var pi = 3.14
+
+            $scope.calcularcircunferencia = function(){                
+                $scope.circunferencia = $scope.diametro * pi
+
+            }
+
+
+
+
+        }])
+
+     
+    </script>
+
+</body>
+</html>

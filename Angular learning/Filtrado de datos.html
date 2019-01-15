@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app= "miApp">
+<head>
+    <meta charset="utf-8">
+    <title>Colecciones en Angular JS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+</head>
+<body>
+
+    <div ng-controller = "Controladores">
+        
+        <h1>Agenda Telefonica</h1>
+        <label> Buscar</label>
+        <input type="search" ng-model = "Busqueda">
+        <p ng-repeat = "Entrada in agenda | filter:Busqueda">
+            
+            {{Entrada.nombre }} : {{Entrada.telefono }}
+
+        </p>
+    </div>
+    <br>
+    <script>
+        
+        var miaplicacion  = angular.module('miApp' , [])
+
+        miaplicacion.controller ('Controladores',['$scope' , function($scope){
+
+                $scope.agenda = [
+
+                    {nombre:'test1', telefono:'726251'},
+                    {nombre:'test2', telefono:'726252'},
+                    {nombre:'test3', telefono:'726253'},
+                    {nombre:'test4', telefono:'726254'},
+                    {nombre:'test5', telefono:'726255'},
+                    {nombre:'test6', telefono:'726257'},
+                    {nombre:'test7', telefono:'726257'},
+                    {nombre:'test8', telefono:'726258'}
+
+
+                ]
+
+        }])
+
+     
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app= "miApp">
+<head>
+    <meta charset="utf-8">
+    <title>Colecciones en Angular JS</title>
+    
+    <style>
+    
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+</head>
+<body>
+
+    <div ng-controller = "Controladores">
+
+
+        <img  ng-src = "{{imagenActual}}">
+        <br>
+        <button ng-click="mostrarimagen('images/homerosimpson.jpg')"> Homero       </button>
+        <button ng-click="mostrarimagen('images/descarga.jpg')"> Naruto </button>
+    
+    </div>
+    <br>
+    <script>
+        
+        var miaplicacion  = angular.module('miApp' , [])
+
+        miaplicacion.controller ('Controladores',['$scope' , function($scope){
+
+            $scope.imagenActual =  'images/homerosimpson.jpg'
+            $scope.mostrarimagen = function(_imagen)
+            {
+
+                    $scope.imagenActual = _imagen
+
+            }
+            
+           
+        }]) 
+
+     
+    </script>
+
+</body>
+</html>

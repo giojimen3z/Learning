@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app= "miApp">
+<head>
+    <meta charset="utf-8">
+    <title>Colecciones en Angular JS</title>
+    
+    <style>
+    
+    .alerta {
+
+        width: 400px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        font-family: monospace;
+        color: #fff;
+        background: #000;
+        font-size: 22px
+
+    }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+</head>
+<body>
+
+    <div ng-controller = "Controladores">
+
+        <button ng-click="mostrar()">Revelar Secreto</button>
+        <button ng-click = "ocultar()">ocultar Secreto</button>
+       <div class="alerta" ng-show="Visibilidadmensaje">
+            Este mensaje es secreto
+       </div>
+    
+    </div>
+    <br>
+    <script>
+        
+        var miaplicacion  = angular.module('miApp' , [])
+
+        miaplicacion.controller ('Controladores',['$scope' , function($scope){
+
+
+            $scope.Visibilidadmensaje =  false
+
+            $scope.mostrar = function(){
+
+                $scope.Visibilidadmensaje =  true
+            }
+
+            $scope.ocultar = function(){
+
+                $scope.Visibilidadmensaje =  false
+
+            }               
+        }]) 
+
+     
+    </script>
+
+</body>
+</html>

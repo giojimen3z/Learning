@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app= "Tiendafruta">
+<head>
+    <title>Controladores  en Angular JS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+</head>
+<body>
+
+    <div ng-controller = "controlador1">
+             <h1>Promocion de  mangos</h1>   
+             <h2>$2.5 cada uno</h2>
+            <label>Cantidad Mangos</label>
+            <input type="text" ng-model = "cantidad">
+            <br>
+            Precio total: {{ cantidad * precio | currency }}
+    </div>
+    <script>
+        
+        var miaplicacion  = angular.module('Tiendafruta' , [])
+
+        miaplicacion.controller ('controlador1',['$scope' , function($scope){
+
+
+                $scope.cantidad = 0
+                $scope.precio = 2.15
+
+
+
+        }])
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html ng-app= "miApp">
+<head>
+    <meta charset="utf-8">
+    <title>Colecciones en Angular JS</title>
+    
+    <style>
+        div{
+
+                width: 600px;
+                margin: 10px auto;
+                text-align: center;
+
+
+        }
+
+        .contenedor {
+            border: solid 2px;
+
+        }
+
+        .angular{
+            background: red;
+            font-size: 40px;
+            padding: 0 40;
+            color: #fff;
+        }
+
+    </style>    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+</head>
+<body>
+
+    <div ng-controller = "Controladores">
+        
+        <div class="contenedor">
+
+                <p ng-Style="estilos"> Yo controlo  el estilo de mis aplicaciones <span ng-class = "claseEspecial">AngularJS</span> </p>
+
+        </div>
+
+        <button ng-click = "Cambiarpropiedades()">Cambiar propiedades        </button>
+        <button ng-click = "CambiarClase()">Cambiar Clase        </button>
+        <button ng-click = "Reiniciarclase()">Reiniciar        </button>
+    </div>
+    <br>
+    <script>
+        
+        var miaplicacion  = angular.module('miApp' , [])
+
+        miaplicacion.controller ('Controladores',['$scope' , function($scope){
+
+                     $scope.Cambiarpropiedades = function(){
+
+                        $scope.estilos = { 
+                            "background" : "Blue" , 
+                            "color": "yellow"
+                        
+                        
+                        }
+
+                     }
+                    $scope.CambiarClase = function(){
+                        
+                        $scope.claseEspecial = "angular"
+                        
+
+                    } 
+
+                    $scope.Reiniciarclase = function(){
+
+                        $scope.estilos = ""
+                        $scope.claseEspecial = ""
+                    } 
+        }]) 
+
+     
+    </script>
+
+</body>
+</html>

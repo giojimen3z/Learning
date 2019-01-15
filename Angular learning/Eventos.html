@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app= "miApp">
+<head>
+    <meta charset="utf-8">
+    <title>Colecciones en Angular JS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+</head>
+<body>
+
+    <div ng-controller = "Controladores">
+        
+        <button ng-click = "clicksimple()">Click</button>
+        <button ng-dblclick = "clickdoble()">Click</button>
+        <img src="Images\descarga.jpg" ng-mouseleave = "Mousedejaimagen()" ng-mouseenter = "mousesobreimagen()"> 
+        <h1>{{ evento }}</h1>
+
+    </div>
+    <br>
+    <script>
+        
+        var miaplicacion  = angular.module('miApp' , [])
+
+        miaplicacion.controller ('Controladores',['$scope' , function($scope){
+
+                $scope.clicksimple = function(){
+
+                    $scope.evento = "click"
+
+                }
+                $scope.clickdoble = function(){
+
+                $scope.evento = "doble"
+
+                }
+                $scope.Mousedejaimagen = function(){
+
+                $scope.evento = "Mouse sale de imagen"
+
+                }
+                $scope.mousesobreimagen = function(){
+
+                $scope.evento = "Mouse entra a la imagen"
+
+                }                
+        }])
+
+     
+    </script>
+
+</body>
+</html>

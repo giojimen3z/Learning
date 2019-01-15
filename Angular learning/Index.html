@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app= "NombreApp">
+<head>
+    <title>insertar varios controladores en Angular JS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+</head>
+<body>
+
+    <div ng-controller = "controlador1">
+
+    </div>
+    <br>
+    <script>
+        
+        var miaplicacion  = angular.module('NombreApp' , [])
+
+        miaplicacion.controller ('controlador1',['$scope' , function($scope){
+
+
+
+
+
+
+        }])
+    </script>
+
+</body>
+</html>
