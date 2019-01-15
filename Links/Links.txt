@@ -1,0 +1,12 @@
+bases d edatos linkedinlearning
+
+https://www.linkedin.com/learning/fundamentos-de-la-programacion-bases-de-datos/bienvenidos-a-fundamentos-de-la-programacion-bases-de-datos?u=2057564
+
+Angular 7
+
+https://www.youtube.com/watch?v=6Rv2bmyu3X4&list=PLZ6WzumExa5WVS0O-oByYH9YYoRrqG8oh&index=11
+
+Oracle con C#
+
+https://www.youtube.com/watch?v=ukb8pmobuv8&list=PL9DVS5UbF3wnFeDneXfgAXWJGm_VVvH8r
+
