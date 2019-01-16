@@ -1,0 +1,9 @@
+Para configuarar por deafult  powershell 
+
+vamos a view , command palet  y tecleamos   terminal:select deafult y selesccionamos  la  
+indicada en mi caso powershell
+
+
+Comandos   de Tyscript para   generar  el JS
+
+tsc "nombre archivo".ts
