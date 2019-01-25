@@ -4,6 +4,78 @@ vamos a view , command palet  y tecleamos   terminal:select deafult y selesccion
 indicada en mi caso powershell
 
 
-Comandos   de Tyscript para   generar  el JS
+Comandos   de Tyscript para   generar  el JS esto s ellama transpilar
+
 
 tsc "nombre archivo".ts
+
+
+para generar el typeconfig  debeos escribir e powershell
+
+tsc -init
+
+se genera la configuracion por deafult de  nuestro tpescript
+
+Tipos de datos primitivos,
+
+boolean
+let isdone: boolean =  false;
+
+Number
+
+let decimal:number =6;
+let Hex:number =0xf00d;
+let binary:number =0b1010;
+let octal:number =0°744;
+
+
+String
+
+cadenas de texto y/o textos
+
+los array en caso de  no  ser declarado tomA COMO VALOR POR DEAFULT ANY ES DECIR ACEPTARA CUALQUIER TIPO DE   INFORMACION
+
+ANY
+
+es un tipo de dato generico el cual puede recibir numeros y luego letras, 
+
+para realizar esta de claracion se debe  poner d ela siguiente forma
+
+let nombrevariable: any = 4;
+******************************************************************* Semana 2 ******************************
+
+en la smenaa  2 se realizan ejemplos de  con funciones
+si se pone un? al final de un parametro este quedara indefinido y no sera nescesario llenarlo en pocas palaras es de tipo opcional
+
+Funciones de Fecha
+
+las funciones con flecha son una forma de abreviar la definicion de las funciones, 
+
+por otro lado si se quiere  realizar una validacion o una transformacion importante se deben agregar las llaves  ejemplo
+
+
+simple
+
+var foo (x,y)=>X+Y
+
+COmpleja
+
+var foo (x,y)=>{
+var result
+
+// se realiza la operacion
+
+return result
+}
+
+prmesas en java script
+
+se usa para   pra realizar  tareas asincronas,
+
+tinee 4 estados
+
+pendiente: su estado inicial,  no se ha cumplido ni rechazado 
+
+cumplida la promesa se ha resuelto satisfactoriamente 
+rechazada la promesa seha completado con un error
+arreglada  la promesa ya no esta pendiente o bien se ha cumplio o se ha rechazado
