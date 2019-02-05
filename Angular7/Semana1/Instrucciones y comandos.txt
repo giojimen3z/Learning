@@ -183,3 +183,23 @@ ng g c nombre componente ->  este comando nos permite crear un nuevo componente 
 ctrl + c detiene la ejecucion de angular 
 
 
+************************************ SEMANA 4 *************************************
+
+
+No se pudo subior  el projecto desde  sourcetree asi que   se busco y se encuentra un  tutorial apra subir los proyectos angular
+ desde  el editor de texto
+
+
+primero instalar el siguiente paquete 
+
+npm i -g angular-cli-ghpages
+
+
+
+BOOSTRAP
+
+Es un framework desarrollado y liberado por twitter que tiene como objetivo  facilitar el diseño web. Permite  crear  de forma
+sencilla webs adaptable, es decir, que se ajustan a cualquier dispositivo y tamaño de pantalla  y siempre  se vean iguald e bien. es open source 
+o codigo abiert, por lo que lo podemos usar de forma gratuita y sinr estricciones
+
+
