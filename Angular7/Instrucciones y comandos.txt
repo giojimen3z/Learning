@@ -1,0 +1,229 @@
+Para configuarar por deafult  powershell 
+
+vamos a view , command palet  y tecleamos   terminal:select deafult y selesccionamos  la  
+indicada en mi caso powershell
+
+
+Comandos   de Tyscript para   generar  el JS esto s ellama transpilar
+
+
+tsc "nombre archivo".ts
+
+
+para generar el typeconfig  debeos escribir e powershell
+
+tsc -init
+
+se genera la configuracion por deafult de  nuestro tpescript
+
+Tipos de datos primitivos,
+
+boolean
+let isdone: boolean =  false;
+
+Number
+
+let decimal:number =6;
+let Hex:number =0xf00d;
+let binary:number =0b1010;
+let octal:number =0°744;
+
+
+String
+
+cadenas de texto y/o textos
+
+los array en caso de  no  ser declarado tomA COMO VALOR POR DEAFULT ANY ES DECIR ACEPTARA CUALQUIER TIPO DE   INFORMACION
+
+ANY
+
+es un tipo de dato generico el cual puede recibir numeros y luego letras, 
+
+para realizar esta de claracion se debe  poner d ela siguiente forma
+
+let nombrevariable: any = 4;
+******************************************************************* Semana 2 ******************************
+
+en la smenaa  2 se realizan ejemplos de  con funciones
+si se pone un? al final de un parametro este quedara indefinido y no sera nescesario llenarlo en pocas palaras es de tipo opcional
+
+Funciones de Fecha
+
+las funciones con flecha son una forma de abreviar la definicion de las funciones, 
+
+por otro lado si se quiere  realizar una validacion o una transformacion importante se deben agregar las llaves  ejemplo
+
+
+simple
+
+var foo (x,y)=>X+Y
+
+COmpleja
+
+var foo (x,y)=>{
+var result
+
+// se realiza la operacion
+
+return result
+}
+
+prmesas en java script
+
+se usa para   pra realizar  tareas asincronas,
+
+tinee 4 estados
+
+pendiente: su estado inicial,  no se ha cumplido ni rechazado 
+
+cumplida la promesa se ha resuelto satisfactoriamente 
+rechazada la promesa seha completado con un error
+arreglada  la promesa ya no esta pendiente o bien se ha cumplio o se ha rechazado
+*********************************** Semana 3*************************************
+ 
+typescript no spermite  crear objetos  e interactuar con ellos  como si fuese un lenguaje de programacion convenciona.
+
+los 4 pilares del POO son   aplicables en typscript,
+
+1 abstraccion: esla capacidad de obtener    y aislar  toda la informacion y cualidades de 
+	       un  objeto que no nos parezcan relevantes para poder ncapsularlos
+
+
+2 encapsulamiento: es la capacidad d eocultar los datos  abstraidos y protegerlos de  
+		  aquellos que no queremos que los   observen o los manejen
+
+3 herencia: la herencia uede cre<r un objeto apartir de uno ya existente,   al crearlo hereda todos sus atributos al cual se le pueden 
+	    añadir  nievas funcionalidades
+
+4 polimorfismo: el polimorfismo es la capacidad para que varias clases de un objeto  derivadod e varias funciones   
+		reaccionen de una forma diferente   deacuerdo a como interactuan con  otras clases y funciones
+
+para realizar el manejo de  los objetos  es muy parecido a C#
+
+
+en typescript  el constructor debemos crearlo nosotros  ayq ue no es como en otros lenguajes que al instanciar la clase 
+
+el crea el constructor
+
+
+MODULOS
+
+es una forma d epoder sementar nuestro codigo  en el proyecto para reutilizarlo mas adelante.
+
+Export permite indicar q ue una clase dentro de mi proyecto  podra ser importada por otro archivo
+
+DECORADORES
+
+
+Basicamente  es una implementacion de un patron  de diseño de software  que en si sirve para  extender  una funcion mediante  otra,
+pero sin tocar la  funcion ,  que se esta extendiendo.  El decorador  recibe unafuncion como argumento (auqella que  se quiere decorar)
+y devuelve esa funcion con alguna  funcionalidad  adicional.
+
+Las  funciones decoradas inician con un @  y  acontinuacion tiene un nombre. Ese nombre  es el de aquello que queremos decorar, 
+por ende ya debe de existir previamente. podriamos decorar una funcion, una propiedad  de una clase, una clase etc.
+
+podemos considerar un decorador  como  una forma de  aumentar   funcionalidades  a ciertos tipos.
+
+Los decoradores pueden ser:
+
+clase, propiedades, parametros o metodos
+
+COMANDOS ANGULAR  
+
+Comando para  instalar angular->  npm install -g @angular/cli 
+Comando para crear un nuevo proyecto -> ng new nombreproyecto
+
+comando de lanzamiento al navegador -> ng serve
+
+QUE ES UN COMPONENTE
+
+ un componente es una   nueva etoqueta  HTML con una vista y una logica  definidas  por el desarrollador 
+
+La vista es una pantallas(template)  en HTML con elementos especiales
+
+la logica   es una clase de Typescript  vinculada a la vista
+
+un estilo  para la vista 
+y un tspec  que se  usa para realizar las prueas de anguilar
+
+* Todo componente tiene un decorador  que  permite asociar los elementos que lo conforman
+
+*todo componente para formar  parste d euna   cista tendra un selector <app-root>
+
+*Todo  componente esta formado por una vista, una logica typescript y un stilo de la vista
+* Todo componente importa las librerias que usara
+* Todo copmponente se exporta para formar parte del todo 
+
+Antes de importar cualquier   modulo  hay que definirlo. En  angular los  modulos  se declaran como clases de Typescript, habitualmente 
+vacias.,decoradas con una funcion especial. es la @ngmodule() que recibe un objeto  como unico argumento. En  las propiedades de ese objeto 
+donde se condigula el modulo.
+
+
+este archivo es el encargado de  entender  que componentes  y  dependencias tenemos en nuestra aplicacion. Si el componente no
+fue declarado como por ejemplo app component no puede ser utilizado
+ 
+CONTEXTO DE NGMODULE
+
+NgModules  es un decorador que recibe un objeto  de metadatos  que definen el  modulo de los meta datos  mas importantes de un ngmodule
+
+declarations: las   vistas  que pertenecen  a   tu modulo.  Hay  3 tipos de clases de  tipo vista : componentes, directivas  y pipes
+
+Exports: Conjunto de declaraciones  que debe ser  accesibles  para  templates de componentes de otros modulos 
+
+Imports: otros  NgModules , cuyas  clases  exportadas son requeridas  por templates  de componentes de  este modulo
+
+Providers: Los servicios  que  nescesita este  modulo y  que estaran disponibles  para toda la  aplicacion
+
+Bootstrap: define la vista raiz utilizado
+
+Comandos angular
+
+ng g c nombre componente ->  este comando nos permite crear un nuevo componente desde la consola
+
+ctrl + c detiene la ejecucion de angular 
+
+
+************************************ SEMANA 4 *************************************
+
+
+No se pudo subior  el projecto desde  sourcetree asi que   se busco y se encuentra un  tutorial apra subir los proyectos angular
+ desde  el editor de texto
+
+
+primero instalar el siguiente paquete 
+
+npm i -g angular-cli-ghpages
+
+
+
+BOOSTRAP
+
+Es un framework desarrollado y liberado por twitter que tiene como objetivo  facilitar el diseño web. Permite  crear  de forma
+sencilla webs adaptable, es decir, que se ajustan a cualquier dispositivo y tamaño de pantalla  y siempre  se vean iguald e bien. es open source 
+o codigo abiert, por lo que lo podemos usar de forma gratuita y sinr estricciones
+
+
+******************************************************************* Semana 4 ******************************
+
+
+Se crea un nuevo proyecto de pruebas    para poner en practica lo aprendfido,
+
+se debe tener en cuenta  que  el oreden en bootstrap es muy nescesario,  sedebe manejar d elas iguiente forma; esto con el fin de evitar 
+errores de consola y  que todo funcione correctamente
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+ese es el orden en el cual se debe agregar bootstrap 1  los css, luiego jquery , luego cdnjs y por ultimo  apcdn
+
+
+Hooking
+
+el termino hooking   abarca  una gama detecnicas utilizadas  para alterar o aumentar el comportamiento de un sistemaoperaticvo,  aplicacion 
+o de  otros componentes de software interceptando llamadas de funcion o mensajes o  eventos pasados entre coponentes de software 
+el codigo que maneja tales llamadas de funcion, eventos 	o mensajes interceptados se le lama hook
